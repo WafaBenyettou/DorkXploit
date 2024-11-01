@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DorkXploit</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:;">
+</head>
+<body>
+    <nav>
+        <a>Because I am so tired of Google dorks...</a>
+    </nav>
+    <div class="container">
+        <h1>
+            <span class="highlight">DorkXploit</span>
+        </h1>       
+        <p>Dorks that will make you... Quack of Qucking</p> 
+        <img src="static/Quack.png" alt="Quack" class="header-image">
+
+        <form id="dorkForm">
+            <input type="text" id="target" placeholder="Enter target domain" required>
+            <button type="submit">Search Dorks</button>
+        </form>
+        <div id="results" class="results-grid"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

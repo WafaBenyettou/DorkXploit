@@ -1,0 +1,752 @@
+{
+  "categories": [
+    {
+      "name": "Admin Access",
+      "description": "Searches to find admin or control panel pages",
+      "dorks": [
+        { "query": "site:TARGET inurl:admin", "subCategory": "Admin Pages" },
+        {
+          "query": "site:TARGET inurl:wp-admin",
+          "subCategory": "WordPress Admin"
+        },
+        {
+          "query": "site:TARGET inurl:controlpanel",
+          "subCategory": "Control Panels"
+        },
+        { "query": "site:TARGET inurl:dashboard", "subCategory": "Dashboards" },
+        {
+          "query": "site:TARGET intitle:admin",
+          "subCategory": "Admin Login Pages"
+        },
+        {
+          "query": "site:TARGET inurl:login.php",
+          "subCategory": "PHP Login Pages"
+        },
+        {
+          "query": "site:TARGET inurl:administrator",
+          "subCategory": "Administrator Login"
+        },
+        {
+          "query": "site:TARGET inurl:admin/login",
+          "subCategory": "Admin Login Forms"
+        },
+        {
+          "query": "site:TARGET inurl:admin_area",
+          "subCategory": "Admin Area"
+        },
+        {
+          "query": "site:TARGET inurl:admincp",
+          "subCategory": "Admin Control Panel"
+        },
+        { "query": "site:TARGET inurl:cpanel", "subCategory": "cPanel Access" },
+        {
+          "query": "site:TARGET inurl:phpmyadmin",
+          "subCategory": "phpMyAdmin Access"
+        },
+        {
+          "query": "site:TARGET inurl:admin.php",
+          "subCategory": "Admin PHP Files"
+        }
+      ]
+    },
+    {
+      "name": "Login and Authentication",
+      "description": "Dorks for login pages, registration, and authentication mechanisms",
+      "dorks": [
+        { "query": "site:TARGET inurl:login", "subCategory": "Login Pages" },
+        { "query": "site:TARGET inurl:signin", "subCategory": "Sign In Pages" },
+        {
+          "query": "site:TARGET inurl:auth",
+          "subCategory": "Authentication Pages"
+        },
+        {
+          "query": "site:TARGET inurl:forgot-password",
+          "subCategory": "Forgot Password Pages"
+        },
+        { "query": "site:TARGET intitle:login", "subCategory": "Login Forms" },
+        {
+          "query": "site:TARGET inurl:register",
+          "subCategory": "Registration Pages"
+        },
+        { "query": "site:TARGET inurl:signup", "subCategory": "Sign Up Pages" },
+        {
+          "query": "site:TARGET inurl:reset",
+          "subCategory": "Password Reset Pages"
+        },
+        {
+          "query": "site:TARGET inurl:verify",
+          "subCategory": "Account Verification"
+        },
+        {
+          "query": "site:TARGET inurl:oauth",
+          "subCategory": "OAuth Login Pages"
+        },
+        {
+          "query": "site:TARGET inurl:login.php",
+          "subCategory": "PHP Login Forms"
+        },
+        {
+          "query": "site:TARGET inurl:admin/login",
+          "subCategory": "Admin Login Forms"
+        },
+        {
+          "query": "site:TARGET inurl:2fa",
+          "subCategory": "Two-Factor Authentication"
+        },
+        {
+          "query": "site:TARGET inurl:session",
+          "subCategory": "Session Management"
+        }
+      ]
+    },
+    {
+      "name": "Sensitive Information",
+      "description": "Pages and files likely containing sensitive information",
+      "dorks": [
+        {
+          "query": "site:TARGET confidential",
+          "subCategory": "Confidential Information"
+        },
+        {
+          "query": "site:TARGET intext:password",
+          "subCategory": "Password Mentions"
+        },
+        { "query": "site:TARGET intext:api_key", "subCategory": "API Keys" },
+        {
+          "query": "site:TARGET inurl:/.env",
+          "subCategory": "Environment Files"
+        },
+        {
+          "query": "site:TARGET filetype:pdf intext:confidential",
+          "subCategory": "Confidential PDFs"
+        },
+        {
+          "query": "site:TARGET filetype:xls intext:password",
+          "subCategory": "Excel Files with Passwords"
+        },
+        {
+          "query": "site:TARGET inurl:config",
+          "subCategory": "Configuration Files"
+        },
+        { "query": "site:TARGET inurl:backup", "subCategory": "Backup Files" },
+        {
+          "query": "site:TARGET intext:credit card",
+          "subCategory": "Credit Card Information"
+        },
+        {
+          "query": "site:TARGET intext:social security number",
+          "subCategory": "SSN Exposure"
+        },
+        { "query": "site:TARGET inurl:api", "subCategory": "API Endpoints" },
+        { "query": "site:TARGET filetype:log", "subCategory": "Log Files" },
+        {
+          "query": "site:TARGET inurl:secret",
+          "subCategory": "Secrets Exposure"
+        },
+        {
+          "query": "site:TARGET intext:login credentials",
+          "subCategory": "Login Credentials"
+        }
+      ]
+    },
+    {
+      "name": "Publicly Accessible Documents",
+      "description": "Direct links to downloadable or accessible documents",
+      "dorks": [
+        { "query": "site:TARGET filetype:pdf", "subCategory": "PDF Documents" },
+        {
+          "query": "site:TARGET filetype:doc",
+          "subCategory": "Word Documents"
+        },
+        { "query": "site:TARGET filetype:xls", "subCategory": "Excel Files" },
+        { "query": "site:TARGET filetype:log", "subCategory": "Log Files" },
+        {
+          "query": "site:TARGET filetype:ppt",
+          "subCategory": "PowerPoint Presentations"
+        },
+        { "query": "site:TARGET filetype:csv", "subCategory": "CSV Files" },
+        { "query": "site:TARGET filetype:xml", "subCategory": "XML Files" },
+        { "query": "site:TARGET filetype:txt", "subCategory": "Text Files" },
+        {
+          "query": "site:TARGET filetype:rtf",
+          "subCategory": "Rich Text Files"
+        },
+        {
+          "query": "site:TARGET filetype:odt",
+          "subCategory": "Open Document Text"
+        },
+        {
+          "query": "site:TARGET inurl:public",
+          "subCategory": "Publicly Accessible Directories"
+        },
+        {
+          "query": "site:TARGET inurl:downloads",
+          "subCategory": "Downloads Directory"
+        },
+        {
+          "query": "site:TARGET intitle:index.of",
+          "subCategory": "Directory Listings"
+        }
+      ]
+    },
+    {
+      "name": "Database and Configuration Files",
+      "description": "Dorks related to database access and configuration files",
+      "dorks": [
+        {
+          "query": "site:TARGET inurl:db.php",
+          "subCategory": "Database Files"
+        },
+        {
+          "query": "site:TARGET inurl:config.php",
+          "subCategory": "Configuration Files"
+        },
+        {
+          "query": "site:TARGET inurl:config.inc.php",
+          "subCategory": "Configuration Include Files"
+        },
+        {
+          "query": "site:TARGET inurl:settings.py",
+          "subCategory": "Python Settings"
+        },
+        {
+          "query": "site:TARGET inurl:database.sql",
+          "subCategory": "SQL Database Dumps"
+        },
+        {
+          "query": "site:TARGET filetype:env",
+          "subCategory": "Environment Configuration"
+        },
+        {
+          "query": "site:TARGET inurl:.git/config",
+          "subCategory": "Git Configuration"
+        },
+        {
+          "query": "site:TARGET inurl:wp-config.php",
+          "subCategory": "WordPress Configuration"
+        },
+        {
+          "query": "site:TARGET inurl:config.yml",
+          "subCategory": "YAML Configuration Files"
+        },
+        {
+          "query": "site:TARGET inurl:database.db",
+          "subCategory": "Database Files"
+        },
+        {
+          "query": "site:TARGET inurl:/.env",
+          "subCategory": "Environment Variables"
+        },
+        {
+          "query": "site:TARGET inurl:config.json",
+          "subCategory": "JSON Configuration Files"
+        }
+      ]
+    },
+    {
+      "name": "Network and Server Information",
+      "description": "Dorks to find network and server configurations",
+      "dorks": [
+        {
+          "query": "site:TARGET inurl:server-status",
+          "subCategory": "Apache Server Status"
+        },
+        {
+          "query": "site:TARGET inurl:server-info",
+          "subCategory": "Apache Server Information"
+        },
+        {
+          "query": "site:TARGET inurl:robots.txt",
+          "subCategory": "Robots.txt File"
+        },
+        {
+          "query": "site:TARGET inurl:.env",
+          "subCategory": "Environment Variables"
+        },
+        {
+          "query": "site:TARGET filetype:xml inurl:config",
+          "subCategory": "Configuration Files"
+        },
+        {
+          "query": "site:TARGET intitle:'index of' public",
+          "subCategory": "Public Directories"
+        },
+        {
+          "query": "site:TARGET inurl:trace",
+          "subCategory": "Trace Route Information"
+        },
+        { "query": "site:TARGET inurl:ping", "subCategory": "Ping Utility" },
+        {
+          "query": "site:TARGET inurl:netstat",
+          "subCategory": "Netstat Output"
+        },
+        {
+          "query": "site:TARGET inurl:phpinfo.php",
+          "subCategory": "PHP Info Page"
+        },
+        {
+          "query": "site:TARGET inurl:configuration",
+          "subCategory": "Server Configuration"
+        },
+        { "query": "site:TARGET inurl:backup", "subCategory": "Backup Files" }
+      ]
+    },
+    {
+      "name": "Miscellaneous Searches",
+      "description": "Various dorks for web vulnerabilities and information retrieval",
+      "dorks": [
+        {
+          "query": "inurl:\"/index.php?id=\"",
+          "subCategory": "SQL Injection Vulnerability"
+        },
+        { "query": "inurl:\"/search?q=\"", "subCategory": "XSS Injection" },
+        {
+          "query": "intitle:\"Index of\" \".env\"",
+          "subCategory": "Environment Files"
+        },
+        {
+          "query": "intitle:\"parent directory\" \".log\"",
+          "subCategory": "Log Files"
+        },
+        {
+          "query": "site:TARGET inurl:\"/login.php\"",
+          "subCategory": "Login Scripts"
+        },
+        { "query": "site:TARGET inurl:readme", "subCategory": "README Files" },
+        {
+          "query": "inurl:\"/php?id=\"",
+          "subCategory": "Possible SQL Injection"
+        },
+        {
+          "query": "inurl:\"/products.php?id=\"",
+          "subCategory": "Vulnerable Products Page"
+        },
+        {
+          "query": "inurl:\"/view.php?id=\"",
+          "subCategory": "View Parameter Injection"
+        },
+        {
+          "query": "inurl:\"/search.php?query=\"",
+          "subCategory": "Possible XSS"
+        },
+        {
+          "query": "intitle:\"Error\" inurl:\"/logs/\"",
+          "subCategory": "Error Logs"
+        },
+        {
+          "query": "intitle:\"Index of\" \"backup\"",
+          "subCategory": "Backup Files"
+        },
+        {
+          "query": "site:TARGET inurl:\"/wp-content/uploads/\"",
+          "subCategory": "Uploaded Files"
+        },
+        {
+          "query": "inurl:\"/download.php?file=\"",
+          "subCategory": "File Download Vulnerability"
+        },
+        {
+          "query": "inurl:\"/config.php\"",
+          "subCategory": "Configuration Files"
+        }
+      ]
+    },
+    {
+      "name": "Webcam and IoT Device Access",
+      "description": "Dorks to find accessible webcams and IoT devices",
+      "dorks": [
+        { "query": "inurl:\"/view.shtml\"", "subCategory": "Webcam Access" },
+        {
+          "query": "inurl:\"/video.cgi\"",
+          "subCategory": "CCTV Camera Access"
+        },
+        { "query": "inurl:\"/camera/view\"", "subCategory": "Camera View" },
+        {
+          "query": "inurl:\"/snapshot.cgi\"",
+          "subCategory": "Snapshot Access"
+        },
+        {
+          "query": "intitle:\"Live View / - AXIS\"",
+          "subCategory": "AXIS Cameras"
+        },
+        {
+          "query": "inurl:\"/cgi-bin/guestimage.cgi\"",
+          "subCategory": "Guest Image Access"
+        },
+        {
+          "query": "inurl:\"/index/frame.htm\"",
+          "subCategory": "Frame Access"
+        },
+        {
+          "query": "inurl:\"/video.mp4\"",
+          "subCategory": "Direct Video Access"
+        },
+        {
+          "query": "inurl:\"/mjpg/video.mjpg\"",
+          "subCategory": "MJPEG Video Stream"
+        },
+        {
+          "query": "intitle:\"IP Camera\" inurl:\"/stream\"",
+          "subCategory": "IP Camera Stream"
+        },
+        {
+          "query": "intitle:\"Network Camera\" inurl:\"/cgi-bin/\"",
+          "subCategory": "Network Camera Access"
+        },
+        {
+          "query": "intitle:\"WebCam\" inurl:\"/view.shtml\"",
+          "subCategory": "Webcam Live Feed"
+        },
+        {
+          "query": "inurl:\"/mjpeg.cgi\"",
+          "subCategory": "MJPEG Stream Access"
+        },
+        {
+          "query": "intitle:\"Camera Stream\" inurl:\"/video.cgi\"",
+          "subCategory": "Camera Stream Access"
+        },
+        { "query": "inurl:\"/cam.html\"", "subCategory": "Webcam HTML Access" }
+      ]
+    },
+    {
+      "name": "API Endpoints",
+      "description": "Dorks to identify API endpoints",
+      "dorks": [
+        { "query": "inurl:\"/api/\"", "subCategory": "General API Access" },
+        { "query": "intitle:\"API Documentation\"", "subCategory": "API Docs" },
+        { "query": "inurl:\"/v1/\"", "subCategory": "Version 1 API" },
+        { "query": "inurl:\"/v2/\"", "subCategory": "Version 2 API" },
+        { "query": "inurl:\"/users/\"", "subCategory": "User API" },
+        { "query": "inurl:\"/products/\"", "subCategory": "Product API" },
+        { "query": "inurl:\"/orders/\"", "subCategory": "Order API" },
+        {
+          "query": "inurl:\"/login/\" intext:\"token\"",
+          "subCategory": "Login API"
+        },
+        { "query": "inurl:\"/register/\"", "subCategory": "Registration API" },
+        { "query": "inurl:\"/search?query=\"", "subCategory": "Search API" },
+        { "query": "inurl:\"/data/\"", "subCategory": "Data Retrieval API" },
+        {
+          "query": "intitle:\"API Keys\" inurl:\"/api_keys\"",
+          "subCategory": "API Key Access"
+        },
+        { "query": "inurl:\"/status/\"", "subCategory": "API Status Endpoint" },
+        { "query": "inurl:\"/webhook/\"", "subCategory": "Webhook Endpoints" },
+        { "query": "inurl:\"/graphql\"", "subCategory": "GraphQL API" },
+        { "query": "inurl:\"/rest-api/\"", "subCategory": "REST API Access" }
+      ]
+    },
+    {
+      "name": "Personal Information and OSINT",
+      "description": "Dorks to retrieve personal information through OSINT techniques",
+      "dorks": [
+        {
+          "query": "\"Name\" \"contact information\"",
+          "subCategory": "Contact Info Searches"
+        },
+        {
+          "query": "allintext:\"Name\" AND intext:\"phone number\"",
+          "subCategory": "Specific Contact Info"
+        },
+        {
+          "query": "site:TARGET inurl:resume",
+          "subCategory": "Resumes and CVs"
+        },
+        { "query": "site:TARGET inurl:cv", "subCategory": "CVs" },
+        { "query": "inurl:\"/profiles/\"", "subCategory": "User Profiles" },
+        { "query": "intext:\"email: \"", "subCategory": "Email Addresses" },
+        { "query": "intext:\"phone: \"", "subCategory": "Phone Numbers" },
+        {
+          "query": "intitle:\"Curriculum Vitae\"",
+          "subCategory": "Resumes/CVs"
+        },
+        { "query": "inurl:\"/about/\"", "subCategory": "About Pages" },
+        { "query": "intext:\"address: \"", "subCategory": "Addresses" },
+        {
+          "query": "site:linkedin.com \"contact\"",
+          "subCategory": "LinkedIn Contacts"
+        },
+        { "query": "inurl:\"/users?id=\"", "subCategory": "User ID Lookup" },
+        {
+          "query": "intitle:\"Index of\" \".git\"",
+          "subCategory": "Git Repositories"
+        },
+        {
+          "query": "filetype:pdf \"sensitive information\"",
+          "subCategory": "Sensitive PDFs"
+        }
+      ]
+    },
+    {
+      "name": "Vulnerable Files and Applications",
+      "description": "Dorks for finding vulnerable files and applications",
+      "dorks": [
+        { "query": "site:TARGET inurl:upload", "subCategory": "File Uploads" },
+        { "query": "site:TARGET ext:bak", "subCategory": "Backup Files" },
+        {
+          "query": "site:TARGET ext:old",
+          "subCategory": "Old Versions of Files"
+        },
+        { "query": "site:TARGET inurl:exif", "subCategory": "Exif Data" },
+        { "query": "site:TARGET ext:php", "subCategory": "PHP Files" },
+        { "query": "site:TARGET ext:sql", "subCategory": "SQL Database Dumps" },
+        { "query": "site:TARGET ext:log", "subCategory": "Log Files" },
+        {
+          "query": "site:TARGET inurl:config",
+          "subCategory": "Configuration Files"
+        },
+        { "query": "site:TARGET ext:json", "subCategory": "JSON Files" },
+        {
+          "query": "site:TARGET inurl:admin.php",
+          "subCategory": "Admin Panel Access"
+        },
+        {
+          "query": "inurl:\"/wp-content/uploads/\"",
+          "subCategory": "WordPress Uploads"
+        },
+        {
+          "query": "filetype:pdf \"vulnerable application\"",
+          "subCategory": "Vulnerable Apps in PDFs"
+        },
+        {
+          "query": "intitle:\"Index of\" \".env\"",
+          "subCategory": "Environment Files"
+        },
+        { "query": "site:TARGET inurl:readme", "subCategory": "README Files" }
+      ]
+    },
+    {
+      "name": "Cloud Storage and Services",
+      "description": "Dorks for finding cloud storage and service configurations",
+      "dorks": [
+        { "query": "site:TARGET inurl:bucket", "subCategory": "Cloud Buckets" },
+        {
+          "query": "site:TARGET inurl:public",
+          "subCategory": "Public Access Buckets"
+        },
+        {
+          "query": "site:TARGET filetype:json",
+          "subCategory": "JSON Configuration Files"
+        },
+        { "query": "site:TARGET filetype:csv", "subCategory": "CSV Files" },
+        { "query": "site:TARGET inurl:api", "subCategory": "API Endpoints" },
+        {
+          "query": "site:TARGET inurl:/.well-known/",
+          "subCategory": "Well-Known URIs"
+        },
+        {
+          "query": "site:TARGET inurl:dropbox",
+          "subCategory": "Dropbox Links"
+        },
+        {
+          "query": "site:TARGET inurl:google drive",
+          "subCategory": "Google Drive Links"
+        },
+        { "query": "site:TARGET inurl:aws", "subCategory": "AWS Links" },
+        {
+          "query": "intitle:\"Index of\" \"uploads\"",
+          "subCategory": "Public Uploads"
+        },
+        {
+          "query": "inurl:\"/s3/\" ext:txt",
+          "subCategory": "S3 Buckets with TXT Files"
+        },
+        { "query": "site:TARGET inurl:files", "subCategory": "File Storage" },
+        {
+          "query": "filetype:yaml \"cloud configuration\"",
+          "subCategory": "Cloud Configurations"
+        },
+        {
+          "query": "filetype:xml \"bucket policy\"",
+          "subCategory": "Bucket Policies"
+        }
+      ]
+    },
+    {
+      "name": "Source Code and Repository Exposure",
+      "description": "Dorks to find exposed source code repositories",
+      "dorks": [
+        { "query": "site:TARGET inurl:git", "subCategory": "Git Repositories" },
+        { "query": "site:TARGET inurl:svn", "subCategory": "SVN Repositories" },
+        {
+          "query": "site:TARGET filetype:php",
+          "subCategory": "PHP Source Code"
+        },
+        {
+          "query": "site:TARGET filetype:py",
+          "subCategory": "Python Source Code"
+        },
+        {
+          "query": "site:TARGET filetype:js",
+          "subCategory": "JavaScript Files"
+        },
+        {
+          "query": "site:TARGET inurl:public",
+          "subCategory": "Public Code Repositories"
+        },
+        {
+          "query": "intitle:\"index of\" \"config.php\"",
+          "subCategory": "Configuration Files"
+        },
+        {
+          "query": "intitle:\"index of\" \".git\"",
+          "subCategory": "Exposed .git Directories"
+        },
+        {
+          "query": "inurl:\"/src/\" filetype:html",
+          "subCategory": "HTML Source Files"
+        },
+        {
+          "query": "inurl:\"/uploads/\" ext:zip",
+          "subCategory": "ZIP Files with Source Code"
+        },
+        {
+          "query": "inurl:\"/repository/\" filetype:md",
+          "subCategory": "Markdown Files"
+        },
+        {
+          "query": "inurl:\"/backup/\" ext:bak",
+          "subCategory": "Backup Source Code Files"
+        },
+        {
+          "query": "site:TARGET inurl:download filetype:tar",
+          "subCategory": "TAR Files"
+        },
+        {
+          "query": "inurl:\"/assets/\" filetype:css",
+          "subCategory": "CSS Files"
+        }
+      ]
+    },
+    {
+      "name": "Social Media and Web Services",
+      "description": "Dorks to find social media profiles and web services information",
+      "dorks": [
+        {
+          "query": "site:twitter.com \"@username\"",
+          "subCategory": "Twitter Usernames"
+        },
+        {
+          "query": "site:facebook.com \"profile\" \"friends\"",
+          "subCategory": "Facebook Profiles"
+        },
+        {
+          "query": "site:instagram.com inurl:explore \"tagged\"",
+          "subCategory": "Instagram Tags"
+        },
+        {
+          "query": "site:linkedin.com \"profile\" \"summary\"",
+          "subCategory": "LinkedIn Profiles"
+        },
+        {
+          "query": "site:youtube.com \"channel\" \"videos\"",
+          "subCategory": "YouTube Channels"
+        },
+        {
+          "query": "site:pinterest.com \"board\"",
+          "subCategory": "Pinterest Boards"
+        },
+        {
+          "query": "site:reddit.com \"subreddit\"",
+          "subCategory": "Reddit Subreddits"
+        },
+        { "query": "inurl:aboutme.com", "subCategory": "About Me Pages" },
+        {
+          "query": "site:quora.com \"user\" \"question\"",
+          "subCategory": "Quora Users and Questions"
+        },
+        {
+          "query": "site:medium.com \"author\" \"stories\"",
+          "subCategory": "Medium Authors"
+        },
+        {
+          "query": "inurl:\"/profile.php?id=\"",
+          "subCategory": "Facebook Profile IDs"
+        },
+        {
+          "query": "site:github.com \"username\"",
+          "subCategory": "GitHub User Profiles"
+        },
+        {
+          "query": "site:forum.example.com \"user\"",
+          "subCategory": "Forum User Profiles"
+        },
+        {
+          "query": "site:site.com \"reviews\" \"user\"",
+          "subCategory": "User Reviews"
+        }
+      ]
+    },
+    {
+      "name": "Vulnerabilities and Exploits",
+      "description": "Dorks related to known vulnerabilities and their exploits",
+      "dorks": [
+        { "query": "inurl:\"/index.php?id=\"", "subCategory": "SQL Injection" },
+        { "query": "inurl:\"/product?id=\"", "subCategory": "SQL Injection" },
+        { "query": "inurl:\"/view.php?id=\"", "subCategory": "SQL Injection" },
+        { "query": "inurl:\"/news.php?id=\"", "subCategory": "SQL Injection" },
+        {
+          "query": "inurl:\"/article.php?id=\"",
+          "subCategory": "SQL Injection"
+        },
+        {
+          "query": "inurl:\"/search.php?q=\"",
+          "subCategory": "Cross-Site Scripting (XSS)"
+        },
+        {
+          "query": "inurl:\"/comments.php?id=\"",
+          "subCategory": "Cross-Site Scripting (XSS)"
+        },
+        {
+          "query": "inurl:\"/submit.php?url=\"",
+          "subCategory": "Open Redirects"
+        },
+        {
+          "query": "intitle:\"phpMyAdmin\" inurl:\"/phpmyadmin/\"",
+          "subCategory": "phpMyAdmin Exploits"
+        },
+        {
+          "query": "inurl:\"/wp-content/plugins/\" -site:wordpress.org",
+          "subCategory": "WordPress Plugin Vulnerabilities"
+        },
+        {
+          "query": "inurl:\"/wp-admin/admin.php?page=\"",
+          "subCategory": "WordPress Admin Exploits"
+        },
+        {
+          "query": "intitle:\"Index of\" \"config.php\"",
+          "subCategory": "Configuration File Exposure"
+        },
+        {
+          "query": "inurl:\"/config/config.php\"",
+          "subCategory": "Configuration Files"
+        },
+        {
+          "query": "inurl:\"/uploads/\" ext:php",
+          "subCategory": "File Upload Vulnerabilities"
+        },
+        {
+          "query": "inurl:\"/cgi-bin/\" ext:pl",
+          "subCategory": "CGI Script Vulnerabilities"
+        },
+        {
+          "query": "intitle:\"Error 500\" \"php\"",
+          "subCategory": "Server Misconfigurations"
+        },
+        {
+          "query": "intitle:\"Error 404\" \"php\"",
+          "subCategory": "Application Errors"
+        },
+        {
+          "query": "site:TARGET inurl:setup.php",
+          "subCategory": "Setup and Configuration Files"
+        },
+        {
+          "query": "site:TARGET inurl:install.php",
+          "subCategory": "Installation Files"
+        },
+        { "query": "inurl:\"/backup/\" ext:sql", "subCategory": "Backup Files" }
+      ]
+    }
+  ]
+}

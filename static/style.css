@@ -1,0 +1,167 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f3f6;
+}
+
+
+/* Navigation Styles */
+nav {
+    background-color: #059600;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+/* Center the container using auto margins */
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Adjust max width as necessary */
+    width: 90%; /* Make the container responsive */
+    margin: 30px auto; /* Center the container horizontally */
+}
+
+/* Header Styles */
+h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+#dorkForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#target {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 100%;
+    max-width: 400px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #059600;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #024700;
+}
+
+/* Results Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic columns */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.category {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category h3 {
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 1.2em;
+}
+
+.category p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.result-item {
+    font-size: 0.95em;
+    color: #059600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.result-item:hover {
+    color: #035500;
+}
+
+
+h1 {
+    font-size: 2.5em; 
+    color: #059600; 
+    margin-bottom: 20px;
+    position: relative; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+/* Highlight effect */
+h1::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Position it slightly below the text */
+    height: 10px; /* Height of the highlight */
+    width: 100%; /* Full width of the text */
+    background-color: #e91e63; /* Bright highlight color */
+    border-radius: 5px; /* Rounded corners */
+    z-index: -1; /* Place it behind the text */
+}
+
+/* Style specific to DorkXploit */
+.highlight {
+    color: #fff; /* White text for contrast */
+    background-color: #059600; /* Use a contrasting background color */
+    padding: 0 5px; /* Add some padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.highlight:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+.header-image {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    margin: 20px 0; /* Adds spacing above and below the image */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
