@@ -14,7 +14,7 @@ To get started with DorkXploit, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/dorkXploit.git
+   git clone https://github.com/WafaBenyettou/dorkXploit.git
    cd dorkXploit
    ```
 
